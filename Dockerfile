@@ -11,4 +11,7 @@ RUN apt-get install -y libgpgme11-dev
 RUN pecl install gnupg
 RUN bash -c "echo extension=gnupg.so >> /opt/bitnami/php/conf/php.ini"
 
+# A few extra bucks for the encrypting/decrypting process
+RUN sed -e "s?memory_limit = 128M?memory_limit = 512M?" /opt/bitnami/php/conf/php.ini
+
 USER 1000
