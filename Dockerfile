@@ -15,6 +15,6 @@ RUN bash -c "echo extension=gnupg.so >> /opt/bitnami/php/conf/php.ini"
 RUN sed -e "s?memory_limit = 128M?memory_limit = 512M?" /opt/bitnami/php/conf/php.ini
 
 # GNUPG repo
-RUN mkdir /gnupg_repo && chown -R bitnami:bitnami /gnupg_repo
+RUN mkdir /gnugpg_repo && chown -R bitnami:bitnami /gnugpg_repo
 
 USER 1000
